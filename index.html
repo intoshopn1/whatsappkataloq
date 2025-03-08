@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Kataloq</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .whatsapp-button {
+            background-color: #25D366;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 10px;
+            width: 250px;
+            text-align: center;
+        }
+        .whatsapp-button:hover {
+            background-color: #1ebe57;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>WhatsApp Kataloq</h2>
+    
+    <button class="whatsapp-button" onclick="sendMessage('Kart nömrəsi: 4169 7388 0329 1909 İntiqam Babayev')">💳 Kart Nömrəsi </button>
+    <button class="whatsapp-button" onclick="sendMessage('M10 nömrəsi: 0708636707')"> M10 nömrəsi </button>
+    <button class="whatsapp-button" onclick="sendMessage('Elmas qiymetleri:\n-110 elmas - 2 Azn\n-220 elmas - 4 Azn\n-341 elmas - 5 Azn\n-572 elmas - 8 Azn\n-913 elmas - 14 Azn\n-1166 elmas - 15 Azn\n-2398 elmas 30 Azn\n-6072 elmas - 85 Azn')">📦 Elmas qiymətləri </button>
+    <button class="whatsapp-button" onclick="sendMessage('Heftelik Ayliq Sv atlama qiymetleri:\n-Həftilik - 3 Azn\n-2x Heftelik - 5 Azn\n-Ayliq - 11 Azn\n-Sv atlama - 5 azn ')"> Heftelik Ayliq Sv atlama </button>
+
+    <script>
+        function sendMessage(message) {
+            var phoneNumber = "0708636707"; // WhatsApp nömrəsi
+            var encodedMessage = encodeURIComponent(message);
+            var whatsappUrl = "https://wa.me/994" + phoneNumber + "?text=" + encodedMessage;
+            window.open(whatsappUrl, "_blank");
+        }
+    </script>
+
+</body>
+</html>
